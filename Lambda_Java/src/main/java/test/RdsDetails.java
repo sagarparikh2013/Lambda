@@ -17,7 +17,7 @@ public class RdsDetails {
 		try {
 		Class.forName("com.mysql.jdbc.Driver");  
 		con=DriverManager.getConnection(  
-		"jdbc:mysql://sagardbidentifier.czpjy57gisbg.us-east-2.rds.amazonaws.com:3306/SagarDB","root","rootroot");  
+		"jdbc:mysql://Your-RDS-CONNECTION-URL-HERE","RDS_USERNAME","RDS_PASSWORD");  
 		Statement stmt=con.createStatement();  
 
 		ResultSet rs = stmt.executeQuery("SELECT * from complaints where name='"+name+"' and contact='"+contact+"'");
